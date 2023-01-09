@@ -9,9 +9,10 @@ export const Tasks = ({tasks, deleteTask, taskEdited}) => {
     const TaskRow = (task,index) => {
 
         return(
+            
               <tr key = {index} className={index%2 === 0?'odd':'even'}>
-                  <td>{task._id}</td>
-                  <td>{task.task}</td>
+                  <td >{task._id}</td>
+                  <td className='todo-item'>{task.task}</td>
                   <td>{task.assignee}</td>
                   <td>
                     <div className="row">
@@ -22,11 +23,12 @@ export const Tasks = ({tasks, deleteTask, taskEdited}) => {
                             <EditTaskModal task={task} taskEdited={taskEdited}/>
                         </div>
                         <div className="col-md-3">
-                          <button type="button" onClick={(e) => deleteTask(task._id)} className="btn btn-danger right">Delete</button>
+                          <button id="delete-btn" type="button" onClick={(e) => deleteTask(task._id)} className="btn btn-danger right ">Delete</button>
                         </div>
                     </div>
                   </td>
               </tr>
+             
           )
     }
 

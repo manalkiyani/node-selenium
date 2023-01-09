@@ -43,6 +43,15 @@ class TaskRepository {
         }
         return {status: `${data.deletedCount > 0 ? true : false}`};
     }
+     async deleteAll() {
+        let data = {};
+        try {
+            data = await Task.deleteAll({});
+        } catch(err) {
+            logger.error('Error::' + err);
+        }
+        return {status: `${data.deletedCount > 0 ? true : false}`};
+    }
 
 }
 

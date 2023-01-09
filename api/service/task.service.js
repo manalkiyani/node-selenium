@@ -19,6 +19,9 @@ class TaskService {
     async deleteTask(taskId) {
         return await taskRepository.deleteTask(taskId);
     }
+     async deleteAll() {
+        return await taskRepository.deleteAll();
+    }
 
 }
 

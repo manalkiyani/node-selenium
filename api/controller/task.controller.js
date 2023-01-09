@@ -22,5 +22,9 @@ class TodoController {
         logger.info('Controller: deleteTask', taskId);
         return await taskService.deleteTask(taskId);
     }
+      async deleteAll() {
+       
+        return await taskService.deleteAll();
+    }
 }
 module.exports = new TodoController();

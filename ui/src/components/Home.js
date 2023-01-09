@@ -4,7 +4,7 @@ import '../App.css';
 import Header from './Header'
 import { Tasks } from './Tasks'
 import CreateTask from './CreateTask'
-import { getAllTasks, deleteTask, fetchSettings } from '../services/TaskService'
+import { getAllTasks, deleteTask, fetchSettings,deleteAll } from '../services/TaskService'
 
 function Home() {
 

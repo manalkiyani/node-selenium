@@ -2,6 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Home from './components/Home'
+import Login from './components/Login'
+import SignUp from './components/Signup';
 import {
   BrowserRouter,
   Routes,
@@ -15,7 +17,9 @@ function App() {
     <BrowserRouter>
       <div>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Home />} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<SignUp/>} />
         </Routes>
       </div>
     </BrowserRouter>
